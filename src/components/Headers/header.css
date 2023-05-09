@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.logo{
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.links {
+    display: flex; 
+    justify-content: space-between;
+    gap: 40px;
+    position: absolute;
+    right: 0px;
+    padding-top: 70px;
+    padding-right: 100px;
+    list-style-type: none;
+    font-size:x-large
+}
+
+a{
+    text-decoration: none;
+    color: #FF6060;
+}
