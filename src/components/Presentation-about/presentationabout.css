@@ -1,0 +1,7 @@
+.montagne{
+    object-fit: cover;
+    width: 80%;
+    height: 250px;
+    border-radius: 20px;
+    margin-top: 70px;
+}

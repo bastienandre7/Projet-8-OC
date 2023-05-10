@@ -1,21 +1,15 @@
 import "./about.css";
-import Header from "../../components/Headers/header";
-import Footer from "../../components/Footer/footer";
+import PresentationAbout from '../../components/Presentation-about/presentationabout';
+import Collapse from '../../components/Collapse/collapse';
 
 
 function home() {
     return(
         <div>
-            <nav>
-                <Header />
-            </nav>
             <main>
-                <p>A propos</p>
-
+                <PresentationAbout />
+                <Collapse />
             </main>
-            <footer>
-                <Footer />
-            </footer>
         </div>
 
     );

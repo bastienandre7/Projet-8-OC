@@ -1,0 +1,37 @@
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-align: start;
+    height: 340px;
+}
+
+.galerie{
+
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    background-color: #F6F6F6;
+    margin: 50px 10%;
+    padding: 50px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.card-title{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    color: white;
+    font-weight: 500;
+    font-size: larger;
+    margin-bottom: 5px;
+}
