@@ -18,6 +18,37 @@
     cursor: pointer;
 }
 
-.security{
-    margin-bottom: 100px;
+.texte-accordeon {
+    color: #FF6060;
+    display: flex;
+    text-align: start;
+    background-color: #F7F7F7;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    font-size: large;
 }
+
+
+
+.toggle{
+    display: none;
+}
+
+.toggle2{
+    display: none;
+}
+
+.toggle3{
+    display: none;
+}
+
+.toggle4{
+    display: none;
+}
+
+.toggle-true{
+    display: flex;
+}
+

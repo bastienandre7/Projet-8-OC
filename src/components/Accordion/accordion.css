@@ -1,0 +1,42 @@
+.texte-accordeon {
+    color: #FF6060;
+    display: flex;
+    text-align: start;
+    background-color: #F7F7F7;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    font-size: large;
+}
+
+.button{
+    margin-top: 30px;
+    text-align: start;
+    color: white;
+    background-color: #FF6060;
+    height: 50px;
+    border-style: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: x-large;
+    cursor: pointer;
+    /* background-image: url(./Vector.png);
+    background-repeat: no-repeat; */
+}
+
+.collapse{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.isActive{
+    display: none;
+}
+
+
+.fleche {
+    transform: rotate(180deg);
+}

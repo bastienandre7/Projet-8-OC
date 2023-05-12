@@ -1,6 +1,6 @@
 .image{
     height: 100%;
-    width: 100%;
+    width: 340px;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -14,16 +14,14 @@
 }
 
 .galerie{
-
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
     background-color: #F6F6F6;
-    margin: 50px 10%;
-    padding: 50px;
     border-radius: 20px;
-    position: relative;
+    padding: 50px;
+    margin: 50px 10%;
 }
 
 .card-title{
