@@ -1,0 +1,15 @@
+.img-banner{
+    object-fit: cover;
+    width: 80%;
+    height: 400px;
+    border-radius: 20px;
+    margin-top: 70px;
+}
+
+.red-star{
+    color: #FF6060;
+}
+
+.gray-star{
+    color: #E3E3E3;
+}

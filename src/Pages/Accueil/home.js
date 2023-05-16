@@ -5,12 +5,10 @@ import Presentation from '../../components/Presentation-acceuil/presentation';
 
 function home() {
     return(
-        <div>
             <main>
                 <Presentation />
                 <Gallery />
             </main>
-        </div>
     );
 }
 

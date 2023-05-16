@@ -5,14 +5,16 @@ import React, { useState } from 'react';
 
 const Accordion = ({ title, content }) => {
     const [isActive, setIsActive] = useState(false);
-    const [fleche, flecheBas] = useState(false);
 
     return (
     <div className="collapse">
         <div className="button" onClick={() => setIsActive(!isActive)}>
-            <div>{title}</div>
+            <h3 className='title-accordion'>{title}</h3>
+                <div>
+                <i className={"fa-sharp fa-solid fa-chevron-down chevron fa-2x "+ (isActive ? "fleche" : "")  }></i>
+            </div>
         </div>
-        {isActive && <div className="texte-accordeon">{content}</div>}
+        {isActive && <p className="texte-accordeon">{content}</p>}
     </div>
     );
 };
