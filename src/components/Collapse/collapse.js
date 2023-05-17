@@ -30,7 +30,7 @@ function Collapse(){
     ];
 
     return(
-        <div className='collapse'>
+        <div className='collapse-2'>
             {data.map(({ title, content }) => (
             <Accordion title={title} content={content} />
         ))}

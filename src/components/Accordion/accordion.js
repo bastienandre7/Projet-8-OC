@@ -1,5 +1,4 @@
 import './accordion.css';
-import Fleche from './Vector.png';
 
 import React, { useState } from 'react';
 

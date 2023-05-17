@@ -2,11 +2,16 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .logo{
-    padding-left: 100px;
+    display: flex;
     padding-top: 50px;
+}
+
+.display-logo{
+    margin-left: 10%;
 }
 
 .links {

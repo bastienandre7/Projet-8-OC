@@ -6,6 +6,7 @@ import Accordion from '../../components/Accordion/accordion';
 
 
 
+
 function Logement() {
     const location = useLocation();
     const [selectedFlat, setSelectedFlat] = useState(null);
@@ -18,31 +19,68 @@ function Logement() {
     };
 
     
+
+    let index = 0;
+
+    function suivante(){
+        const img = document.getElementById("image");
+        if (index >= selectedFlat.pictures.length-1)
+            index = -1;
+        index++;
+        img.setAttribute("src", selectedFlat.pictures[index])
+        return
+    };
+
+    
+
+    function precedente(){
+        const img = document.getElementById("image");
+        if (index <= 0 )
+            index = selectedFlat.pictures.length;
+        index--;
+        img.setAttribute("src", selectedFlat.pictures[index])
+        return
+    };
+    
+    
     if(selectedFlat == null) return;
 
     
+    
     return(
             <main>
-                <img src={selectedFlat.cover} className='img-banner' />
-                <div>
-                    <h2>{selectedFlat.title}</h2>
-                    <p>{selectedFlat.location}</p>
-                    {selectedFlat.tags.map((tag) => (<span>{tag}</span>))}
+                <div className='container-carousel'>
+                    <img src={selectedFlat.pictures[0]} id='image' className='img-banner' />
+                    <i onClick={() => precedente()} className="fa-sharp fa-solid fa-chevron-left fa-5x arrow-left"></i>
+                    <i onClick={() => suivante()} className="fa-sharp fa-solid fa-chevron-right fa-5x arrow-right"></i>
                 </div>
-                <div>
-                    <p>{selectedFlat.host.name}</p>
-                    <img src={selectedFlat.host.picture} />
-                    <div>
-                        {[1, 2, 3, 4, 5].map((number) => 
-                        (<span className={selectedFlat.rating >= number ? "red-star" : "gray-star"}>
-                            <i className="fa-solid fa-star fa-sm"></i>
-                        </span>) 
-                        )}
+                <div className='container-info'>
+                    <div className='titre-loca-tag'>
+                        <h2 className='titre-logement'>{selectedFlat.title}</h2>
+                        <p className='location'>{selectedFlat.location}</p>
+                        <div className='container-tags'>
+                            {selectedFlat.tags.map((tag) => (<span className='tag'>{tag}</span>))}
+                        </div>
+                    </div>
+                    <div className='nom-photo-stars'>
+                        <div className='nom-photo'>
+                            <p className='nom'>{selectedFlat.host.name}</p>
+                            <img src={selectedFlat.host.picture} className='photo-profil' />
+                        </div>
+                        <div className='stars-container'>
+                            {[1, 2, 3, 4, 5].map((number) => 
+                            (<span className={selectedFlat.rating >= number ? "red-star" : "gray-star"}>
+                                <i class="fa-sharp fa-solid fa-star fa-2x"></i>
+                            </span>) 
+                            )}
+                        </div>
                     </div>
                 </div>
-                <div className=''>
-                    <Accordion title="Description" content={selectedFlat.description} />
-                    <Accordion title="Équipements" content={selectedFlat.equipments} />
+                <div className='accordion-logement'>
+                    <Accordion title="Description"  content={selectedFlat.description} />
+                    <div className='txt-vertical'>
+                        <Accordion title="Équipements"  content={selectedFlat.equipments} />
+                    </div>
                 </div>
             </main>
     );
