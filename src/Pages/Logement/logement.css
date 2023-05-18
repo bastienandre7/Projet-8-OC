@@ -130,3 +130,51 @@
 .txt-vertical{
     text-align: center;
 }
+
+.compteur{
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.none{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container-info{
+        flex-direction: column;
+    }
+
+    .nom-photo-stars {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .stars-container{
+        align-items: center;
+        margin-top: 10px;
+        width: 80%;
+    }
+
+    .accordion-logement{
+        display: block;
+    }
+
+    .fa-5x{
+        font-size: 3em;
+    }
+
+    .arrow-left{
+        top: 45%;
+    }
+
+    .arrow-right{
+        top: 45%;
+    }
+    
+}

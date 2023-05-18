@@ -18,16 +18,17 @@ function Logement() {
         setSelectedFlat(state);
     };
 
-    
 
     let index = 0;
 
     function suivante(){
         const img = document.getElementById("image");
+        const cpt = document.getElementById("compteur");
         if (index >= selectedFlat.pictures.length-1)
             index = -1;
         index++;
-        img.setAttribute("src", selectedFlat.pictures[index])
+        img.setAttribute("src", selectedFlat.pictures[index]);
+        cpt.innerHTML = (index+1)+"/"+(selectedFlat.pictures.length);
         return
     };
 
@@ -35,15 +36,18 @@ function Logement() {
 
     function precedente(){
         const img = document.getElementById("image");
+        const cpt = document.getElementById("compteur");
         if (index <= 0 )
             index = selectedFlat.pictures.length;
         index--;
-        img.setAttribute("src", selectedFlat.pictures[index])
+        img.setAttribute("src", selectedFlat.pictures[index]);
+        cpt.innerHTML = (index+1)+"/"+(selectedFlat.pictures.length);
         return
     };
     
     
     if(selectedFlat == null) return;
+
 
     
     
@@ -51,8 +55,11 @@ function Logement() {
             <main>
                 <div className='container-carousel'>
                     <img src={selectedFlat.pictures[0]} id='image' className='img-banner' />
-                    <i onClick={() => precedente()} className="fa-sharp fa-solid fa-chevron-left fa-5x arrow-left"></i>
-                    <i onClick={() => suivante()} className="fa-sharp fa-solid fa-chevron-right fa-5x arrow-right"></i>
+                    <i onClick={() => precedente()} id='arrow-carousel' className={selectedFlat.pictures.length === 1 ? "none" : "fa-sharp fa-solid fa-chevron-left fa-5x arrow-left"}></i>
+                    <i onClick={() => suivante()} id='arrow-carousel' className={selectedFlat.pictures.length === 1 ? "none" : "fa-sharp fa-solid fa-chevron-right fa-5x arrow-right"}></i>
+                    <div className="position">
+                        <p id='compteur' className='compteur'>1/{selectedFlat.pictures.length}</p>
+                    </div>
                 </div>
                 <div className='container-info'>
                     <div className='titre-loca-tag'>

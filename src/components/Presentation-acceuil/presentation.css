@@ -24,3 +24,15 @@
     margin-top: 70px;
     
 }
+
+@media screen and (max-width: 768px) {
+
+    .titre{
+        font-size: 150%;
+    }
+
+    .img{
+        height: 150px;
+    }
+    
+}

@@ -33,3 +33,13 @@
     font-size: larger;
     margin-bottom: 5px;
 }
+
+
+
+@media screen and (max-width: 768px) {
+
+    .galerie{
+        background-color: white;
+        margin: 0px 10%;
+    }
+}

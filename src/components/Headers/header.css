@@ -34,3 +34,17 @@ a{
 .underline {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+
+    .logo{
+        width: 50%;
+    }
+
+
+    .links {
+        gap: 20px;
+        padding-top: 50px;
+        font-size: large;
+    }
+}
