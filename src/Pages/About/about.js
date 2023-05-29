@@ -1,17 +1,15 @@
 import "./about.css";
-import PresentationAbout from '../../components/Presentation-about/presentationabout';
+import Banner from '../../components/Banner/banner';
 import Collapse from '../../components/Collapse/collapse';
+import MountainIMG from './kalen-emsley-Bkci_8qcdvQ-unsplash 2.png';
 
 
 function home() {
     return(
-        <div>
             <main>
-                <PresentationAbout />
+                <Banner image={MountainIMG} />
                 <Collapse />
             </main>
-        </div>
-
     );
 }
 

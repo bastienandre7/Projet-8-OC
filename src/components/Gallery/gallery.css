@@ -41,5 +41,17 @@
     .galerie{
         background-color: white;
         margin: 0px 10%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .image{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .card{
+        width: 100%;
+        overflow: hidden;
     }
 }

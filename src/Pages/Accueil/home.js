@@ -1,12 +1,14 @@
 import "./home.css";
 import Gallery from '../../components/Gallery/gallery';
-import Presentation from '../../components/Presentation-acceuil/presentation';
+import Banner from '../../components/Banner/banner';
+import Imagebanner from './IMG.png';
 
 
 function home() {
+    const txt = "Chez vous, partout et ailleurs";
     return(
             <main>
-                <Presentation />
+                <Banner image={Imagebanner} content={txt} />
                 <Gallery />
             </main>
     );

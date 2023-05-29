@@ -140,6 +140,10 @@
     font-size: x-large;
 }
 
+.li-tag{
+    list-style-type: none;
+}
+
 .none{
     display: none;
 }
@@ -155,10 +159,22 @@
         flex-direction: row-reverse;
     }
 
+    .nom-photo{
+        overflow: hidden;
+        gap: 20px;
+    }
+
+    .nom{
+        width: 50%;
+    }
+
     .stars-container{
         align-items: center;
         margin-top: 10px;
-        width: 80%;
+        width: 60%;
+        justify-content: left;
+        padding-left: 10%;
+        overflow: hidden;
     }
 
     .accordion-logement{
@@ -167,6 +183,10 @@
 
     .fa-5x{
         font-size: 3em;
+    }
+
+    .fa-2x{
+        font-size: 1em;
     }
 
     .arrow-left{

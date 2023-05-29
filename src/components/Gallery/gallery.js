@@ -14,7 +14,7 @@ function gallery(index) {
         <div className="galerie">
             {
                 array.map((index) => 
-                (<NavLink to="/logement" id={index.id} state={index.id}> 
+                (<NavLink to="/logement" id={index.id} state={index.id} key={index.id}> 
                     <div className='card' >
                         <img src={index.cover} alt={index.title} className='image'/>
                         <figcaption className='card-title'>{index.title}</figcaption>

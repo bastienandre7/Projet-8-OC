@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import array from '../../logements.json';
 import Accordion from '../../components/Accordion/accordion';
+import Tags from '../../components/Tags/tags'
 
 
 
@@ -48,7 +49,6 @@ function Logement() {
     
     if(selectedFlat == null) return;
 
-
     
     
     return(
@@ -65,9 +65,7 @@ function Logement() {
                     <div className='titre-loca-tag'>
                         <h2 className='titre-logement'>{selectedFlat.title}</h2>
                         <p className='location'>{selectedFlat.location}</p>
-                        <div className='container-tags'>
-                            {selectedFlat.tags.map((tag) => (<span className='tag'>{tag}</span>))}
-                        </div>
+                        <Tags selectedTags={selectedFlat.tags}/>
                     </div>
                     <div className='nom-photo-stars'>
                         <div className='nom-photo'>
@@ -75,9 +73,9 @@ function Logement() {
                             <img src={selectedFlat.host.picture} className='photo-profil' />
                         </div>
                         <div className='stars-container'>
-                            {[1, 2, 3, 4, 5].map((number) => 
-                            (<span className={selectedFlat.rating >= number ? "red-star" : "gray-star"}>
-                                <i class="fa-sharp fa-solid fa-star fa-2x"></i>
+                            {[1, 2, 3, 4, 5].map((number, index) => 
+                            (<span key={index} className={selectedFlat.rating >= number ? "red-star" : "gray-star"}>
+                                <i className="fa-sharp fa-solid fa-star fa-2x"></i>
                             </span>) 
                             )}
                         </div>
@@ -86,7 +84,7 @@ function Logement() {
                 <div className='accordion-logement'>
                     <Accordion title="Description"  content={selectedFlat.description} />
                     <div className='txt-vertical'>
-                        <Accordion title="Équipements"  content={selectedFlat.equipments} />
+                        <Accordion title="Équipements"  content={selectedFlat.equipments.map((index)=> (<li className='li-tag' key={index}>{index}</li>))} />
                     </div>
                 </div>
             </main>
