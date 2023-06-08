@@ -6,13 +6,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-85%);
+    align-items: center;
+    font-style: normal;
     font-weight: 500;
-    font-size: 350%;
+    font-size: 48px;
+    width: 80%;
 }
+
+
 
 .img{
     object-fit: cover;
-    width: 80%;
+    width: 90%;
     height: 250px;
     z-index: 0;
     border-radius: 20px;
@@ -23,7 +28,19 @@
 .container-presentation{
     position: relative;
     margin-top: 70px;
-    
+}
+
+
+
+
+
+
+@media screen and (max-width: 810px) {
+
+    .titre{
+        font-size: 200%;
+    }
+
 }
 
 @media screen and (max-width: 768px) {

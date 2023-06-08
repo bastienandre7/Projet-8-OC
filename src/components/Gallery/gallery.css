@@ -1,37 +1,14 @@
-.image{
-    height: 100%;
-    width: 340px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.card{
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    text-align: start;
-    height: 340px;
-}
 
 .galerie{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     background-color: #F6F6F6;
     border-radius: 20px;
     padding: 50px;
-    margin: 50px 10%;
-}
-
-.card-title{
-    position: absolute;
-    top: 80%;
-    left: 5%;
-    color: white;
-    font-weight: 500;
-    font-size: larger;
-    margin-bottom: 5px;
+    margin: 50px 5%;
 }
 
 
@@ -40,18 +17,10 @@
 
     .galerie{
         background-color: white;
-        margin: 0px 10%;
+        margin: 0px 5%;
         padding-left: 0px;
         padding-right: 0px;
+        display: block;
     }
 
-    .image{
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .card{
-        width: 100%;
-        overflow: hidden;
-    }
 }

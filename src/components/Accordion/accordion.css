@@ -41,16 +41,25 @@
 
 .chevron{
     display: flex;
+    align-items: center;
     justify-content: right;
     position: absolute;
     top: 0%;
-    right: 5%;
+    right: 4%;
 }
 
 .title-accordion{
     position: absolute;
-    top: 0%;
+    top: 5%;
     left: 3%;
     margin: 0px;
     overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+
+    .chevron{
+        top: 20%;
+    }
+    
 }
