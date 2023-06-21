@@ -1,6 +1,6 @@
 import "./footer.css";
-import Rights from '../../assets ( images )/© 2020 Kasa. All rights reservedreserved.png';
-import LogoBlack from '../../assets ( images )/LOGOlogo black.png';
+import Rights from '../../assets/© 2020 Kasa. All rights reservedreserved.png'
+import LogoBlack from '../../assets/LOGOlogo black.png';
 
 
 function footer() {

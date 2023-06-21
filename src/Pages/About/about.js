@@ -1,7 +1,7 @@
 import "./about.css";
 import Banner from '../../components/Banner/banner';
 import Accordion from "../../components/Accordion/accordion";
-import MountainIMG from '../../assets ( images )/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png';
+import MountainIMG from '../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png';
 
 
 function home() {
