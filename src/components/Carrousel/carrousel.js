@@ -1,15 +1,15 @@
 import './carrousel.css';
+import React, { useState } from 'react';
 
 const Carrousel = ({length, source, title}) => {
 
-    let index = 0;
+    const [index, setIndex] = useState(0);
 
     function suivante(){
         const img = document.getElementById("image");
         const cpt = document.getElementById("compteur");
-        if (index >= length-1)
-            index = -1;
-        index++;
+        const newIndex = index + 1;
+        setIndex(newIndex >= length ? 0 : newIndex);
         img.setAttribute("src", source[index]);
         cpt.innerHTML = (index+1)+"/"+(length);
         return
@@ -20,13 +20,13 @@ const Carrousel = ({length, source, title}) => {
     function precedente(){
         const img = document.getElementById("image");
         const cpt = document.getElementById("compteur");
-        if (index <= 0 )
-            index = length;
-        index--;
+        const newIndex = index - 1;
+        setIndex(newIndex < 0 ? length-1 : newIndex);
         img.setAttribute("src", source[index]);
         cpt.innerHTML = (index+1)+"/"+(length);
         return
     };
+
 
     return(
 

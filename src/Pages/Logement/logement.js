@@ -1,6 +1,6 @@
 import './logement.css';
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import array from '../../logements.json';
 import Accordion from '../../components/Accordion/accordion';
 import Tags from '../../components/Tags/tags';
@@ -13,14 +13,19 @@ function Logement() {
     
     const id = useParams();
 
-    const selected = array.filter((select) => select.id === id.id)[0];
+    const selected = array.find((select) => select.id === id.id);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/logement/${selected.id}`)
+        if(selected === undefined) {
+            return navigate ("/error", {replace:true})
+        }
     });
 
+    let navigate = useNavigate();
     
-    if(selected == null) return;
+    if(selected === undefined) {
+        return navigate ("/error", {replace:true})
+    }
 
     
     return(
